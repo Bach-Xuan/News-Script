@@ -47,7 +47,7 @@ async function fetchNewsData() {
             const articleElement = document.createElement("article");
             articleElement.classList.add("top-story");
             articleElement.innerHTML = `
-                <img src="${article.image_url || './image/800x400.png'}">
+                <img src="${article.image_url || './image/800x400.png'}" loading="lazy">
                 <div class="top-story-content">
                     <h3>${article.title}</h3>
                     <p>${article.description}</p>
@@ -65,7 +65,7 @@ async function fetchNewsData() {
             const newsItem = document.createElement("div");
             newsItem.classList.add("latest-news-item");
             newsItem.innerHTML = `
-                <img src="${article.image_url || './image/150x100.png'}">
+                <img src="${article.image_url || './image/150x100.png'}" loading="lazy">
                 <div>
                     <h4>${article.title}</h4>
                     <p>${article.description}</p>
@@ -83,7 +83,7 @@ async function fetchNewsData() {
             const categoryItem = document.createElement("article");
             categoryItem.classList.add("category-item");
             categoryItem.innerHTML = `
-                <img src="${article.image_url || './image/400x200.png'}">
+                <img src="${article.image_url || './image/400x200.png'}" loading="lazy">
                 <h4>${article.category}</h4>
                 <p>${article.description}</p>
             `;

@@ -3,30 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords"
+        content="News Script, Lê Xuân Bách, Le Xuan Bach, News, News Platform, Online News, MindX, MindX Technology School, GitHub, Bach-Xuan, HTML, CSS, JavaScript">
+    <meta name="author" content="Lê Xuân Bách">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>News Script</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
     <link rel="stylesheet" href="main.css" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="main.css">
     </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <!-- BACK TO TOP BUTTON -->
     <section class="back-to-top-button">
         <button id="backToTop">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fa-solid fa-arrow-up"></i>
         </button>
-    </section>
-
-    <!-- WEATHER WIDGET -->
-    <section class="weather-widget">
-        <a class="weatherwidget-io" href="https://forecast7.com/en/10d82106d63/ho-chi-minh-city/"
-            data-label_1="HO CHI MINH" data-icons="Climacons Animated" data-theme="pure">HO CHI MINH</a>
-        <script>
-            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-        </script>
     </section>
 
     <!-- CHATBOT -->
@@ -36,16 +32,53 @@
         </script>
     </section>
 
-    <!-- ARTICLE CONTENT -->
-    <section class="article-content">
-        <h1 id="article-title"></h1>
-        <p id="article-author"></p>
-        <p id="article-published"></p>
-        <img id="article-image" src="" alt="Article Image">
-        <p id="article-description"></p>
-        <p id="article-content"></p>
-        <a id="article-link" href="" target="_blank">Read Full Article</a>
-    </section>
+    <header>
+        <!-- WEATHER WIDGET -->
+        <section class="weather-widget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/10d82106d63/ho-chi-minh-city/"
+                data-label_1="HO CHI MINH" data-icons="Climacons Animated" data-theme="pure">HO CHI MINH</a>
+            <script>
+                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+            </script>
+        </section>
+    </header>
+
+    <main>
+        <!-- ARTICLE CONTENT -->
+        <section class="article-content">
+            <h1 id="article-title"></h1>
+            <p id="article-author"></p>
+            <p id="article-published"></p>
+            <img id="article-image" src="" loading="lazy">
+            <p id="article-description"></p>
+            <p id="article-content"></p>
+            <a id="article-link" href="" target="_blank">Read Full Article</a>
+        </section>
+    </main>
+
+    <footer>
+        <!-- FOOTER -->
+        <div class="footer-divider"></div>
+        <div class="footer-logo">
+            <img src="./image/logo.jpg" loading="lazy" />
+            <p>NEWS SCRIPT</p>
+        </div>
+        <div class="footer-links">
+            <p>&copy; 2025 NEWS SCRIPT. ALL RIGHTS RESERVED.</p>
+            <p>
+                <a href="#" onclick="event.preventDefault();">PRIVACY POLICY</a> | <a href="#"
+                    onclick="event.preventDefault();">TERMS OF SERVICE</a> |
+                <a href="#" onclick="event.preventDefault();">CONTACT US</a>
+            </p>
+        </div>
+        <div class="footer-social">
+            <a href="#" onclick="event.preventDefault();"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" onclick="event.preventDefault();"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" onclick="event.preventDefault();"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" onclick="event.preventDefault();"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" onclick="event.preventDefault();"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
 
     <script src="main.js" defer></script>
     <script>
