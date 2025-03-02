@@ -1,0 +1,93 @@
+.form-container {
+    width: 100%;
+    max-width: 9999px;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* CSS CHO CÁC LOẠI INPUT */
+input[type="text"],
+textarea,
+input[type="file"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4a73e8;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    color: #4a73e8;
+    min-width: 335px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+.submit-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.submit-button {
+    max-width: 150px;
+    width: 100%;
+    background-color: #4a73e8;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 900;
+    cursor: pointer;
+    /* TRANSITION MƯỢT */
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #3a5ec4;
+    transform: scale(1.1);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* CSS CHO HIỂN THỊ MẬT KHẨU */
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 17px;
+    color: #4a73e8;
+}
+
+.toggle-eye:hover {
+    color: #3a5ec4;
+}

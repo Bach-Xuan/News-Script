@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="main.css">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- BACK TO TOP BUTTON -->
+    <section class="back-to-top-button">
+        <button id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </section>
+
+    <!-- WEATHER WIDGET -->
+    <section class="weather-widget">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/10d82106d63/ho-chi-minh-city/"
+            data-label_1="HO CHI MINH" data-icons="Climacons Animated" data-theme="pure">HO CHI MINH</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+    </section>
+
+    <!-- CHATBOT -->
+    <section class="chatbot">
+        <script>
+            (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "4e5UNIM-4Gpe-1qR__zSj"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+        </script>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <section class="article-content">
+        <h1 id="article-title"></h1>
+        <p id="article-author"></p>
+        <p id="article-published"></p>
+        <img id="article-image" src="" alt="Article Image">
+        <p id="article-description"></p>
+        <p id="article-content"></p>
+        <a id="article-link" href="" target="_blank">Read Full Article</a>
+    </section>
+
+    <script src="main.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = JSON.parse(localStorage.getItem('selectedArticle'));
+            if (article) {
+                document.getElementById('article-title').textContent = article.title;
+                document.getElementById('article-author').textContent = article.creator || 'Unknown Author';
+                document.getElementById('article-published').textContent = new Date(article.pubDate).toLocaleString();
+                document.getElementById('article-image').src = article.image_url || './image/800x400.png';
+                document.getElementById('article-description').textContent = article.description;
+                document.getElementById('article-content').textContent = article.content || 'Content not available.';
+                document.getElementById('article-link').href = article.link;
+            }
+        });
+    </script>
+</body>
+
+</html>
