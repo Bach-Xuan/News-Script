@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a73e8;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+a {
+    color: red;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
