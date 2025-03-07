@@ -5,12 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     color: #4a73e8;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .container {
     text-align: center;
     padding: 2rem;
-    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
