@@ -28,7 +28,7 @@ function initBackToTopButton() {
 }
 
 async function fetchNewsData() {
-    const apiUrl = "https://newsdata.io/api/1/latest?apikey=pub_6851165a998287bd633cd273478508dd9fdfe&category=politics&country=bd";
+    const apiUrl = "https://newsdata.io/api/1/latest?apikey=pub_6851165a998287bd633cd273478508dd9fdfe&category=politics&country=au&language=en";
 
     try {
         const response = await fetch(apiUrl);
