@@ -42,6 +42,7 @@ body {
     font-size: 65px;
     font-weight: 900;
     cursor: default;
+    user-select: none;
 }
 
 .brand-header img {
@@ -52,6 +53,7 @@ body {
 /* WEATHER WIDGET */
 .weather-widget {
     padding: 50px;
+    pointer-events: none;
 }
 
 .content-container,
@@ -286,6 +288,7 @@ nav {
 footer {
     color: #4a73e8;
     text-align: center;
+    user-select: none;
 }
 
 footer a {
@@ -299,7 +302,6 @@ footer a {
 }
 
 .footer-logo {
-    margin-bottom: 15px;
     font-size: 25px;
     font-weight: 900;
     cursor: default;
