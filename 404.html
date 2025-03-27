@@ -6,12 +6,13 @@
     <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Lê Xuân Bách">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title>404 - Page Not Found</title>
     <link rel="icon" type="image/x-icon" href="./image/favicon.ico">
-    <link rel="stylesheet" href="./css/page-not-found.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./css/404.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="./css/page-not-found.css">
+        <link rel="stylesheet" href="./css/404.css">
     </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -21,16 +22,16 @@
             (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "4e5UNIM-4Gpe-1qR__zSj"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
         </script>
     </section>
+
     <main>
         <!-- CONTENT -->
         <section class="content">
-            <div class="container">
-                <h1>404</h1>
-                <h2>Oops! Something went wrong.</h2>
-                <p>The page you requested does not exist or its address is incorrect.</p>
-                <p>Please go back to the <a href="#" onclick="window.history.back();">previous page</a> or visit our <a
-                        href="index.html">homepage</a>.</p>
-            </div>
+            <h1>404</h1>
+            <h2>Oops! Something went wrong.</h2>
+            <p>The page you requested does not exist or its address is incorrect.</p>
+            <p>Please go back to the <a href="#" onclick="window.history.back();"><i id="arrow"
+                        class="fa-solid fa-arrow-turn-up"></i> previous page</a> or visit our <a href="index.html"><i
+                        class="fa-solid fa-house"></i>homepage</a>.</p>
         </section>
     </main>
 </body>

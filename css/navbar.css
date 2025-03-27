@@ -1,0 +1,57 @@
+nav {
+    font-weight: 900;
+    width: 100%;
+    height: 90px;
+}
+
+.navbar {
+    margin-top: 40px;
+}
+
+.navbar a {
+    color: white;
+}
+
+.home-btn {
+    margin-left: 2%;
+}
+
+.home-btn i {
+    font-size: 1.5em;
+    color: white;
+    transition: 0.3s;
+}
+
+.home-btn i:hover {
+    transform: scale(1.2);
+}
+
+.search-box {
+    width: 100%;
+    padding: 20px !important;
+    font-size: 1em;
+}
+
+.btn-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.form-item {
+    margin-right: 4%;
+}
+
+.login-btn {
+    margin-right: 2%;
+}
+
+.login-btn i {
+    font-size: 1.5em;
+    color: white;
+    transition: 0.3s;
+}
+
+.login-btn i:hover {
+    transform: scale(1.2);
+}
