@@ -2,7 +2,7 @@
 function getFormValues(ids) {
     return ids.reduce((values, id) => {
         const el = document.getElementById(id);
-        values[id] = el ? el.value.trim() : '';
+        if (el) values[id] = el.value.trim();
         return values;
     }, {});
 }
@@ -15,8 +15,14 @@ function getUserFromLocalStorage(username) {
     return JSON.parse(localStorage.getItem(username));
 }
 
-document.getElementById('register')?.addEventListener('submit', function (e) {
-    e.preventDefault();
+function handleFormSubmit(formId, callback) {
+    document.getElementById(formId)?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        callback();
+    });
+}
+
+handleFormSubmit('register', () => {
     const { "input-username": username, "input-email": email, "input-password-register": password } =
         getFormValues(['input-username', 'input-email', 'input-password-register']);
 
@@ -25,8 +31,7 @@ document.getElementById('register')?.addEventListener('submit', function (e) {
     window.location.href = 'login.html';
 });
 
-document.getElementById('login')?.addEventListener('submit', function (e) {
-    e.preventDefault();
+handleFormSubmit('login', () => {
     const { "input-username": username, "input-password-login": password } =
         getFormValues(['input-username', 'input-password-login']);
 
@@ -34,6 +39,6 @@ document.getElementById('login')?.addEventListener('submit', function (e) {
     if (storedUser?.password === password) {
         window.location.href = 'index.html';
     } else {
-        alert('Incorrect username or password.');
+        alert('Incorrect username or password!');
     }
 });

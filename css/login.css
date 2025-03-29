@@ -24,6 +24,10 @@ p,
     cursor: default;
 }
 
+h1 {
+    animation: float 3s ease-in-out infinite;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -64,6 +68,18 @@ input[type="password"] {
     cursor: pointer;
     font-size: 17px;
     color: #4a73e8;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes fadeIn {

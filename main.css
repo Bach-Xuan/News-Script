@@ -34,6 +34,10 @@ body {
     color: #4a73e8;
 }
 
+nav {
+    font-weight: 900;
+}
+
 /* BRAND-HEADER */
 .brand-header {
     text-align: center;
